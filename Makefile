@@ -20,6 +20,7 @@ ifeq ($(CPU),x86-64)
     TEST_SRC+=fp_generator_test.cpp
   endif
 endif
+CFLAGS+=-DCYBOZU_STACKTRACE_WITH_BFD_GPL
 SAMPLE_SRC=bench.cpp ecdh.cpp random.cpp rawbench.cpp vote.cpp pairing.cpp large.cpp tri-dh.cpp bls_sig.cpp pairing_c.c she_smpl.cpp
 
 ifneq ($(MCL_MAX_BIT_SIZE),)

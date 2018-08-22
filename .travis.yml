@@ -6,10 +6,9 @@ compiler:
   - gcc
   - clang
 before_install:
-  - sudo apt install -y libgmp-dev
+  - sudo apt install -y libgmp-dev libbfd-dev
 script:
   - git clone https://github.com/herumi/cybozulib.git
-  - git clone https://github.com/herumi/xbyak.git
   - git clone https://github.com/herumi/debug_mcl.git
   - cd debug_mcl
   - make DEBUG=1 bin/fp_test.exe bin/fp_generator_test.exe
