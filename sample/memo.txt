@@ -1,0 +1,87 @@
+on i7-2600 3.4GHz Windows 7 + VS2013
+old
+       gmp bit  192 add   137.70 sub    89.86 mul   426.34 inv  7724.11
+     xbyak bit  192 add    16.90 sub    13.09 mul    77.18 inv  5118.22
+       gmp bit  254 add   143.31 sub   119.45 mul   637.46 inv 10208.96
+     xbyak bit  254 add    31.07 sub    15.87 mul   116.29 inv  7347.26
+       gmp bit  384 add   152.36 sub   105.14 mul   660.78 inv 14924.75
+     xbyak bit  384 add    33.31 sub    11.89 mul   341.93 inv 17171.11
+       gmp bit  521 add   146.06 sub   106.94 mul  1114.34 inv 20524.66
+     xbyak bit  521 add    31.53 sub    15.16 mul   697.56 inv 30190.20
+ secp160k1        gmp add  6977.78 sub  7047.96 dbl  6805.84 mul 1448442.74
+ secp160k1      xbyak add  1119.56 sub  1146.90 dbl   970.88 mul 209132.01
+ secp192k1        gmp add  5963.23 sub  6081.51 dbl  5881.54 mul 2093590.21
+ secp192k1      xbyak add  1153.15 sub  1177.84 dbl   993.45 mul 365994.33
+ NIST_P192        gmp add  6424.52 sub  6497.95 dbl  6742.96 mul 2294163.02
+ NIST_P192      xbyak add  1192.56 sub  1204.90 dbl  1127.78 mul 385177.28
+ secp224k1        gmp add  7615.08 sub  7810.44 dbl  7538.37 mul 2216822.52
+ secp224k1      xbyak add  1763.49 sub  1793.82 dbl  1546.30 mul 450908.64
+ secp256k1        gmp add  7078.74 sub  7216.49 dbl  6950.75 mul 3301643.98
+ secp256k1      xbyak add  1836.60 sub  1868.07 dbl  1611.10 mul 774618.26
+ NIST_P224        gmp add  7706.07 sub  7819.79 dbl  8337.21 mul 3226799.61
+ NIST_P224      xbyak add  1725.06 sub  1798.32 dbl  1659.15 mul 658986.93
+ NIST_P256        gmp add  9080.52 sub  9252.89 dbl  9691.00 mul 4207335.59
+ NIST_P256      xbyak add  1846.00 sub  1888.18 dbl  1754.83 mul 758926.86
+ NIST_P384        gmp add  9308.36 sub  9521.42 dbl 10104.82 mul 6825617.54
+ NIST_P384      xbyak add  5019.70 sub  4960.08 dbl  4405.42 mul 3138199.20
+ NIST_P521        gmp add 15262.12 sub 15192.36 dbl 16123.68 mul 15463496.35
+ NIST_P521      xbyak add 10676.61 sub 10741.09 dbl  9031.26 mul 8835126.06
+
+mpir-2.7.0 + VS2013
+
+       gmp bit  192 add   135.42 sub    92.83 mul   414.70 inv  7229.55
+     xbyak bit  192 add    17.89 sub    13.53 mul    80.63 inv  5399.01
+       gmp bit  254 add   144.13 sub   121.14 mul   679.97 inv  9433.51
+     xbyak bit  254 add    33.17 sub    16.73 mul   122.22 inv  7843.05
+       gmp bit  384 add   151.61 sub   108.53 mul   692.58 inv 13981.07
+     xbyak bit  384 add    34.57 sub    12.39 mul   375.48 inv 18111.02
+       gmp bit  521 add   146.69 sub   105.38 mul  1123.43 inv 18649.96
+     xbyak bit  521 add    32.01 sub    15.48 mul   736.33 inv 30897.29
+ secp160k1        gmp add  7443.42 sub  7200.92 dbl  6952.41 mul 1468536.94
+ secp160k1      xbyak add  1160.48 sub  1176.91 dbl   994.72 mul 215803.89
+ secp192k1        gmp add  6249.51 sub  6432.65 dbl  6103.53 mul 2196356.75
+ secp192k1      xbyak add  1185.14 sub  1224.83 dbl  1036.39 mul 371187.09
+ NIST_P192        gmp add  6677.98 sub  6706.92 dbl  6962.59 mul 2371816.38
+ NIST_P192      xbyak add  1227.00 sub  1233.49 dbl  1137.57 mul 393262.13
+ secp224k1        gmp add  8056.02 sub  8154.97 dbl  7850.73 mul 2318755.38
+ secp224k1      xbyak add  1814.56 sub  1807.40 dbl  1561.54 mul 464486.83
+ secp256k1        gmp add  7547.22 sub  7676.32 dbl  7297.06 mul 3440395.52
+ secp256k1      xbyak add  1883.81 sub  1904.31 dbl  1611.59 mul 784387.28
+ NIST_P224        gmp add  7985.26 sub  8176.86 dbl  8539.14 mul 3383900.23
+ NIST_P224      xbyak add  1798.60 sub  1830.89 dbl  1724.14 mul 681150.08
+ NIST_P256        gmp add  8582.70 sub  8713.26 dbl  9347.46 mul 3941940.69
+ NIST_P256      xbyak add  1903.99 sub  1912.32 dbl  1766.16 mul 771118.57
+ NIST_P384        gmp add  9715.27 sub  9769.06 dbl 10207.74 mul 7128751.63
+ NIST_P384      xbyak add  5114.94 sub  5151.19 dbl  4528.83 mul 3227896.75
+ NIST_P521        gmp add 15319.42 sub 15282.31 dbl 16312.28 mul 15565569.88
+ NIST_P521      xbyak add 10374.78 sub 10516.75 dbl  9297.69 mul 8881736.66
+
+-----------------------------------------------------------------------------
+sandy bridge + mpir-2.7.0 + lib_mpir_sandybridge_ivybridge + VS2015
+
+       gmp bit  192 add   131.78 sub    87.19 mul   428.53 inv  7209.00
+     xbyak bit  192 add    17.08 sub    12.98 mul    76.41 inv  5124.42
+       gmp bit  254 add   132.10 sub   109.28 mul   657.59 inv  9173.74
+     xbyak bit  254 add    31.64 sub    16.07 mul   116.44 inv  7410.32
+       gmp bit  384 add   142.79 sub   102.59 mul   699.22 inv 13625.35
+     xbyak bit  384 add    33.53 sub    11.82 mul   357.92 inv 17235.25
+       gmp bit  521 add   139.15 sub   102.20 mul  1103.40 inv 18490.37
+     xbyak bit  521 add    31.96 sub    15.08 mul   693.92 inv 30147.44
+ secp160k1        gmp add  7161.26 sub  7419.68 dbl  7033.25 mul 1497052.68
+ secp160k1      xbyak add  1116.94 sub  1136.70 dbl   995.21 mul 213639.21
+ secp192k1        gmp add  6448.98 sub  6580.64 dbl  6400.15 mul 2255902.61
+ secp192k1      xbyak add  1169.47 sub  1189.22 dbl  1002.49 mul 363602.10
+ NIST_P192        gmp add  6803.86 sub  6851.44 dbl  7095.25 mul 2418451.43
+ NIST_P192      xbyak add  1169.33 sub  1214.69 dbl  1106.14 mul 381210.38
+ secp224k1        gmp add  8214.88 sub  8214.56 dbl  7859.70 mul 2340333.10
+ secp224k1      xbyak add  1760.50 sub  1767.59 dbl  1522.60 mul 453663.61
+ secp256k1        gmp add  7532.76 sub  7782.60 dbl  7346.69 mul 3525598.57
+ secp256k1      xbyak add  1869.70 sub  1892.58 dbl  1585.85 mul 771247.60
+ NIST_P224        gmp add  8242.32 sub  8356.68 dbl  8587.38 mul 3403071.48
+ NIST_P224      xbyak add  1731.75 sub  1746.23 dbl  1647.74 mul 659638.62
+ NIST_P256        gmp add  8505.06 sub  8647.17 dbl  8971.50 mul 3920587.55
+ NIST_P256      xbyak add  1825.56 sub  1860.44 dbl  1707.69 mul 748981.49
+ NIST_P384        gmp add  9821.51 sub  9844.92 dbl 10228.85 mul 7119815.16
+ NIST_P384      xbyak add  4919.81 sub  5024.41 dbl  4467.18 mul 3148803.35
+ NIST_P521        gmp add 15459.01 sub 15459.78 dbl 16230.12 mul 15646776.92
+ NIST_P521      xbyak add 10199.94 sub 10123.99 dbl  8870.16 mul 8664401.97
