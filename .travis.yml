@@ -12,7 +12,11 @@ script:
   - git clone https://github.com/herumi/xbyak.git
   - git clone https://github.com/herumi/debug_mcl.git
   - cd debug_mcl
-  - make test DEBUG=1
-  - make clean
+  - make DEBUG=1 bin/fp_test.exe bin/fp_generator_test.exe
+  - bin/fp_test.exe
+  - bin/fp_generator.exe
+#  - make test DEBUG=1
+#  - make clean
 #  - make test_go
+
  
