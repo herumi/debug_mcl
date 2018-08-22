@@ -1741,7 +1741,7 @@ struct Code : Xbyak::CodeGenerator {
 #else
 		mov(rdx, rsi);
 #endif
-		jmp((void*)op.fpDbl_mulPre);
+		jmp((void*)op.fpDbl_mulPreA_);
 	}
 	void gen_fpDbl_mulPre()
 	{
@@ -3047,6 +3047,8 @@ private:
 	}
 };
 
+#define MCL_RWE
+
 struct FpGenerator {
 	static const size_t codeSize = 4096 * 8;
 	static const size_t pageSize = 4096;
@@ -3056,15 +3058,22 @@ struct FpGenerator {
 		: mem((uint8_t*)cybozu::AlignedMalloc(codeSize, pageSize))
 		, code(0)
 	{
+#ifdef MCL_RWE
+		setRWE();
+#endif
 	}
 	void init(Op& op)
 	{
 		if (code) {
+#ifndef MCL_RWE
 			setRW();
+#endif
 			delete code;
 		}
 		code = new Code(codeSize, mem, op);
+#ifndef MCL_RWE
 		setRE();
+#endif
 	}
 	~FpGenerator()
 	{
@@ -3075,6 +3084,10 @@ struct FpGenerator {
 private:
 	FpGenerator(const FpGenerator&);
 	void operator==(const FpGenerator&);
+	void setRWE()
+	{
+		Xbyak::CodeArray::protect(mem, codeSize, Xbyak::CodeArray::PROTECT_RWE);
+	}
 	void setRW()
 	{
 		Xbyak::CodeArray::protect(mem, codeSize, Xbyak::CodeArray::PROTECT_RW);
