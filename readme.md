@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/herumi/mcl.png)](https://travis-ci.org/herumi/mcl)
+[![Build Status](https://travis-ci.org/herumi/debug_mcl.png)](https://travis-ci.org/herumi/debug_mcl)
 
 # mcl
 
